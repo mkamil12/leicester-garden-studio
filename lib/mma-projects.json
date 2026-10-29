@@ -1,0 +1,102 @@
+[
+  {
+    "id": "garden-tidy",
+    "title": "Garden tidy-up",
+    "before": "/assets/mma/garden-before.jpg",
+    "after": "/assets/mma/garden-after.jpg",
+    "beforeAlt": "Garden tidy-up before MMA Garden Services’ visit",
+    "afterAlt": "Garden tidy-up after MMA Garden Services’ visit",
+    "dimensions": {
+      "before": {
+        "width": 1600,
+        "height": 938
+      },
+      "after": {
+        "width": 1600,
+        "height": 938
+      }
+    },
+    "source": {
+      "page": "https://www.mma-garden-services.co.uk/",
+      "before": "https://mma-garden-services.co.uk/wp-content/uploads/2024/03/before-1.jpg",
+      "after": "https://mma-garden-services.co.uk/wp-content/uploads/2024/03/after-1.jpg"
+    },
+    "verifiedAt": "2026-10-29",
+    "note": "Pair displayed together in the official before-and-after gallery. No project location, date, duration or price is asserted."
+  },
+  {
+    "id": "hedge-trim",
+    "title": "Hedge trimming",
+    "before": "/assets/mma/hedge-before.jpg",
+    "after": "/assets/mma/hedge-after.jpg",
+    "beforeAlt": "Hedge trimming before MMA Garden Services’ visit",
+    "afterAlt": "Hedge trimming after MMA Garden Services’ visit",
+    "dimensions": {
+      "before": {
+        "width": 752,
+        "height": 1020
+      },
+      "after": {
+        "width": 752,
+        "height": 1020
+      }
+    },
+    "source": {
+      "page": "https://www.mma-garden-services.co.uk/",
+      "before": "https://www.mma-garden-services.co.uk/wp-content/uploads/2024/10/hedgetrimbefore1.jpg",
+      "after": "https://www.mma-garden-services.co.uk/wp-content/uploads/2024/10/hedgetrimafter.jpg"
+    },
+    "verifiedAt": "2026-10-29",
+    "note": "Pair displayed together in the official before-and-after gallery. No project location, date, duration or price is asserted."
+  },
+  {
+    "id": "garden-clearance",
+    "title": "Overgrown garden tidy-up",
+    "before": "/assets/mma/tidy-before.jpg",
+    "after": "/assets/mma/tidy-after.jpg",
+    "beforeAlt": "Overgrown garden tidy-up before MMA Garden Services’ visit",
+    "afterAlt": "Overgrown garden tidy-up after MMA Garden Services’ visit",
+    "dimensions": {
+      "before": {
+        "width": 1600,
+        "height": 1200
+      },
+      "after": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    "source": {
+      "page": "https://www.mma-garden-services.co.uk/",
+      "before": "https://www.mma-garden-services.co.uk/wp-content/uploads/2024/10/gardentidyupbefore.jpg",
+      "after": "https://www.mma-garden-services.co.uk/wp-content/uploads/2024/10/gardentidyupafter.jpg"
+    },
+    "verifiedAt": "2026-10-29",
+    "note": "Pair displayed together in the official before-and-after gallery. No project location, date, duration or price is asserted."
+  },
+  {
+    "id": "rear-garden-care",
+    "title": "Rear garden tidy-up",
+    "before": "/assets/mma/rear-before.jpg",
+    "after": "/assets/mma/rear-after.jpg",
+    "beforeAlt": "Rear garden tidy-up before MMA Garden Services’ visit",
+    "afterAlt": "Rear garden tidy-up after MMA Garden Services’ visit",
+    "dimensions": {
+      "before": {
+        "width": 1600,
+        "height": 1200
+      },
+      "after": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    "source": {
+      "page": "https://www.mma-garden-services.co.uk/",
+      "before": "https://www.mma-garden-services.co.uk/wp-content/uploads/2024/10/gardenbefore.jpg",
+      "after": "https://www.mma-garden-services.co.uk/wp-content/uploads/2024/10/gardenafter.jpg"
+    },
+    "verifiedAt": "2026-10-29",
+    "note": "Pair displayed together in the official before-and-after gallery. No project location, date, duration or price is asserted."
+  }
+]

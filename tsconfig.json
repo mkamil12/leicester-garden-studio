@@ -1,0 +1,71 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "lib/config.ts",
+    "lib/render.ts",
+    "lib/store.ts",
+    "lib/supabase.ts",
+    "lib/utils.ts",
+    "components/ui/button.tsx",
+    "components/ui/card.tsx",
+    "components/ui/input.tsx",
+    "components/ui/textarea.tsx",
+    "components/ui/badge.tsx",
+    "proxy.ts",
+    "next.config.ts",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "examples",
+    "dist",
+    ".vinext",
+    ".wrangler",
+    ".sites-runtime",
+    "outputs",
+    "work",
+    "worker",
+    "db",
+    "drizzle.config.ts",
+    "scripts",
+    "vite.config.ts",
+    "cloudflare-env.d.ts",
+    "supabase/functions",
+    "app/chatgpt-auth.ts"
+  ]
+}

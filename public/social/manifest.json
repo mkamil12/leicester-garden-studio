@@ -1,0 +1,122 @@
+[
+  {
+    "filename": "home.jpg",
+    "title": "Naturally well kept.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 94473,
+    "background": "/assets/garden-hero-v2.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "services.jpg",
+    "title": "Garden care, made personal.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 97534,
+    "background": "/assets/garden-detail-v2.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "regular-maintenance.jpg",
+    "title": "Regular garden maintenance.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 92234,
+    "background": "/assets/mma/garden-after.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "one-off-care.jpg",
+    "title": "Garden clearance.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 66665,
+    "background": "/assets/mma/tidy-after.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "lawn-treatment.jpg",
+    "title": "Hedges, trees & lawns.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 75259,
+    "background": "/assets/mma/hedge-after.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "about.jpg",
+    "title": "Meet MMA Garden Services.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 97741,
+    "background": "/assets/garden-hero-v2.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "pricing.jpg",
+    "title": "A quote shaped around your garden.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 99843,
+    "background": "/assets/garden-detail-v2.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "booking.jpg",
+    "title": "Your next garden visit.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 94757,
+    "background": "/assets/garden-hero-v2.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "contact.jpg",
+    "title": "Let’s talk about your garden.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 93984,
+    "background": "/assets/mma/rear-after.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "privacy.jpg",
+    "title": "Your details, handled with care.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 97595,
+    "background": "/assets/garden-detail-v2.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "proposal.jpg",
+    "title": "A new chapter for MMA.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 95357,
+    "background": "/assets/garden-hero-v2.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  },
+  {
+    "filename": "projects.jpg",
+    "title": "Real gardens. Remarkable changes.",
+    "width": 1200,
+    "height": 630,
+    "bytes": 94228,
+    "background": "/assets/mma/garden-after.jpg",
+    "logo": "/assets/mma/logo.png",
+    "preview": true
+  }
+]

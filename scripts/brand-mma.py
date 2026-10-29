@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,re
 r=Path(__file__).resolve().parents[1];p=r/'lib/page-templates.json';site=json.loads(p.read_text());projects=json.loads((r/'lib/mma-projects.json').read_text())
-logo='<img class="mma-logo" src="/assets/mma/logo.png" alt="MMA Garden Services logo" width="200" height="200"><span class="mma-name">MMA<span>GARDEN SERVICES</span></span>'
+logo='<img class="mma-logo" src="/assets/mma/logo-transparent.png" alt="MMA Garden Services logo" width="200" height="200"><span class="mma-name">MMA<span>GARDEN SERVICES</span></span>'
 for part in ['header','footer']:
  site[part]=re.sub(r'<svg viewBox="0 0 40 40".*?</svg><span>leicester<span class="wordmark-sub">gardening services</span></span>',logo,site[part],flags=re.S)
 site['header']=site['header'].replace('Our approach','About MMA').replace('<a href="/pricing">Pricing</a>','<a href="/projects">Our work</a>')

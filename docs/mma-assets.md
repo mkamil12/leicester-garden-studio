@@ -37,3 +37,7 @@ The official service page lists maintenance, garden clearance, tree/bush pruning
 ## Rights and launch status
 
 This reuse is authorised by the user for the client pitch preview. Public visibility of a source image does not itself establish a transferable licence. Before a public commercial launch or unrelated portfolio reuse, obtain MMA’s approval of the logo, photographs, customer photo permissions and final descriptions. Keep appropriate preview status until the business approves.
+
+## Transparent navigation logo
+
+`logo-transparent.png` was derived from the supplied logo using the built-in image editing tool, then resized for web use. Prompt: remove only the black background, preserve the pink tree/MMA and white GARDEN SERVICES lettering, output genuine alpha transparency. The original `logo.png` is retained for provenance. The transparent version is used in the navigation, footer, favicon and sharing cards.

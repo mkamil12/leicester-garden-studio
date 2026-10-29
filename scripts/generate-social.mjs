@@ -50,7 +50,7 @@ function wrap(text, max = 24) {
   return lines;
 }
 await mkdir(destination, { recursive: true });
-const logo = await sharp(path.join(assets, 'mma', 'logo.png')).resize({ width: 128, height: 128, fit: 'inside' }).png().toBuffer();
+const logo = await sharp(path.join(assets, 'mma', 'logo-transparent.png')).resize({ width: 128, height: 128, fit: 'inside' }).png().toBuffer();
 const manifest = [];
 for (const card of cards) {
   const lines = wrap(card.title);
@@ -86,7 +86,7 @@ for (const card of cards) {
   }
   const filename = `${card.slug}.jpg`;
   await writeFile(path.join(destination, filename), jpeg);
-  manifest.push({ filename, title: card.title, width, height, bytes: jpeg.length, background: `/assets/${card.image}`, logo: '/assets/mma/logo.png', preview: true });
+  manifest.push({ filename, title: card.title, width, height, bytes: jpeg.length, background: `/assets/${card.image}`, logo: '/assets/mma/logo-transparent.png', preview: true });
   console.log(`${filename}: ${Math.round(jpeg.length / 1024)} KB`);
 }
 await writeFile(path.join(destination, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');

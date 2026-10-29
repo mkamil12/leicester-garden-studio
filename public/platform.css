@@ -834,8 +834,8 @@
   width: 66px;
   height: 66px;
   object-fit: contain;
-  border-radius: 13px;
-  background: #080808;
+  border-radius: 0;
+  background: transparent;
 }
 .mma-name {
   font-size: 27px;
@@ -1149,7 +1149,7 @@
   .mma-logo {
     width: 53px;
     height: 53px;
-    border-radius: 10px;
+    border-radius: 0;
   }
   .wordmark {
     gap: 10px;

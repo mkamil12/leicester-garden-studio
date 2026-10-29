@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "MMA Garden Studio",
   description: "Garden services website and owner workspace",
   robots: { index: false, follow: false },
-  icons: { icon: "/assets/mma/logo.png" },
+  icons: { icon: "/assets/mma/logo-transparent.png" },
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,3 +1,21 @@
-import {render} from '@/lib/render';import {publicContent} from '@/lib/store';
-export const dynamic='force-dynamic';
-export async function GET(request:Request){const path=new URL(request.url).pathname.replace(/\/$/,'')||'/';const html=render(path,await publicContent());if(!html)return new Response('<!doctype html><html lang="en"><title>Page not found</title><body style="font-family:Arial;padding:10vw;background:#eeeee6;color:#283324"><h1>Let’s get you back to the garden.</h1><p>That page could not be found.</p><a href="/">Return home ↗</a></body></html>',{status:404,headers:{'Content-Type':'text/html;charset=utf-8'}});return new Response(html,{headers:{'Content-Type':'text/html;charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin','Permissions-Policy':'camera=(), microphone=(), geolocation=()'}});}
+import { render } from "@/lib/render";
+import { publicContent } from "@/lib/store";
+export const dynamic = "force-dynamic";
+export async function GET(request: Request) {
+  const path = new URL(request.url).pathname.replace(/\/$/, "") || "/";
+  const html = render(path, await publicContent());
+  if (!html)
+    return new Response(
+      '<!doctype html><html lang="en"><title>Page not found</title><body style="font-family:Arial;padding:10vw;background:#eeeee6;color:#283324"><h1>Let’s get you back to the garden.</h1><p>That page could not be found.</p><a href="/">Return home ↗</a></body></html>',
+      { status: 404, headers: { "Content-Type": "text/html;charset=utf-8" } },
+    );
+  return new Response(html, {
+    headers: {
+      "Content-Type": "text/html;charset=utf-8",
+      "Cache-Control": "no-store",
+      "X-Content-Type-Options": "nosniff",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    },
+  });
+}

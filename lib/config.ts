@@ -1,9 +1,47 @@
-export const origin = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? 'https://'+process.env.VERCEL_PROJECT_PRODUCTION_URL : 'http://localhost:3000');
-export const business = {name:'MMA Garden Services',official:'https://www.mma-garden-services.co.uk/',contact:'https://www.mma-garden-services.co.uk/get-in-touch/'};
-export const defaults:Record<string,string> = {
- heroTitle:'Naturally well kept.', intro:'MMA Garden Services is Daniel’s local garden care business, serving Leicester and Leicestershire with regular maintenance, garden clearance, lawn care and tree and hedge services.', regularPrice:'Tailored quote', oneoffPrice:'Tailored quote', lawnPrice:'Tailored quote', regularDescription:'Thoughtful, ongoing garden maintenance, including lawn care, weed control and seasonal attention.', oneoffDescription:'Garden clearance and tidy-ups, with drive and path clearing for outdoor spaces that need a reset.', lawnDescription:'Hedge shaping, tree and bush pruning, lawn maintenance and related garden work.', bookingNote:'Choose a preferred visit window. The team reviews your photos and confirms the scope, price and appointment separately.',contactEmail:'',contactPhone:'07951 217202',area:'Leicester',publicNotice:'Client preview: test enquiries only. The hero is a generated garden study; before-and-after project photographs are from MMA Garden Services’ published gallery.'
+export const origin =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? "https://" + process.env.VERCEL_PROJECT_PRODUCTION_URL
+    : "http://localhost:3000");
+export const business = {
+  name: "MMA Garden Services",
+  official: "https://www.mma-garden-services.co.uk/",
+  contact: "https://www.mma-garden-services.co.uk/get-in-touch/",
 };
-export const slots=['09:00','11:00','14:00'];
-export const serviceNames:Record<string,string>={regular:'Regular garden maintenance',oneoff:'Garden clearance',lawn:'Hedges, trees & lawns'};
-export const editableKeys=Object.keys(defaults);
-export function esc(value:unknown){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));}
+export const defaults: Record<string, string> = {
+  heroTitle: "Naturally well kept.",
+  intro:
+    "MMA Garden Services is Daniel’s local garden care business, serving Leicester and Leicestershire with regular maintenance, garden clearance, lawn care and tree and hedge services.",
+  regularPrice: "Tailored quote",
+  oneoffPrice: "Tailored quote",
+  lawnPrice: "Tailored quote",
+  regularDescription:
+    "Thoughtful, ongoing garden maintenance, including lawn care, weed control and seasonal attention.",
+  oneoffDescription:
+    "Garden clearance and tidy-ups, with drive and path clearing for outdoor spaces that need a reset.",
+  lawnDescription:
+    "Hedge shaping, tree and bush pruning, lawn maintenance and related garden work.",
+  bookingNote:
+    "Choose a preferred visit window. The team reviews your photos and confirms the scope, price and appointment separately.",
+  contactEmail: "",
+  contactPhone: "07951 217202",
+  area: "Leicester",
+  publicNotice:
+    "Client preview: test enquiries only. The hero is a generated garden study; before-and-after project photographs are from MMA Garden Services’ published gallery.",
+};
+export const slots = ["09:00", "11:00", "14:00"];
+export const serviceNames: Record<string, string> = {
+  regular: "Regular garden maintenance",
+  oneoff: "Garden clearance",
+  lawn: "Hedges, trees & lawns",
+};
+export const editableKeys = Object.keys(defaults);
+export function esc(value: unknown) {
+  return String(value ?? "").replace(
+    /[&<>"']/g,
+    (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+        c
+      ]!,
+  );
+}

@@ -1,7 +1,66 @@
-import {identity,access,configured} from '@/lib/supabase';
-import Login from './login';
+import { identity, access, configured } from "@/lib/supabase";
+import Login from "./login";
 
-
-import Workspace from './workspace';
-export const dynamic='force-dynamic';
-export default async function Admin(){const user=await identity();if(!user)return <main style={{minHeight:'100vh',background:'#eeeee6',padding:'12vh 8vw',fontFamily:'Arial',color:'#283324'}}><p style={{letterSpacing:'.15em',fontSize:11}}>LEICESTER GARDEN STUDIO / OWNER WORKSPACE</p><h1 style={{fontWeight:400,fontSize:'clamp(40px,7vw,80px)',letterSpacing:'-.05em',lineHeight:1.05}}>A calmer place<br/>to manage the work.</h1><p style={{maxWidth:450,lineHeight:1.8}}>Sign in with your individual email account. Only an authorised owner or team member can view enquiries, photos and website content.</p>{configured()?<Login/>:<p style={{marginTop:25,fontSize:13,lineHeight:1.8}}>The workspace is ready for Supabase configuration. Sign-in and data access remain disabled until the owner connects the project.</p>}<p style={{marginTop:35,fontSize:12}}><a href="/">Back to the website</a></p></main>;const role=await access();if(!role)return <main style={{padding:'12vh 8vw',fontFamily:'Arial'}}><h1>Your account isn’t on the team list.</h1><p>Ask the studio owner to add your sign-in email. No booking or photo data has been disclosed.</p><a href="/auth/signout" target="_top">Sign out and use another account</a></main>;return <Workspace/>;}
+import Workspace from "./workspace";
+export const dynamic = "force-dynamic";
+export default async function Admin() {
+  const user = await identity();
+  if (!user)
+    return (
+      <main
+        style={{
+          minHeight: "100vh",
+          background: "#eeeee6",
+          padding: "12vh 8vw",
+          fontFamily: "Arial",
+          color: "#283324",
+        }}
+      >
+        <p style={{ letterSpacing: ".15em", fontSize: 11 }}>
+          MMA GARDEN STUDIO / OWNER WORKSPACE
+        </p>
+        <h1
+          style={{
+            fontWeight: 400,
+            fontSize: "clamp(40px,7vw,80px)",
+            letterSpacing: "-.05em",
+            lineHeight: 1.05,
+          }}
+        >
+          A calmer place
+          <br />
+          to manage the work.
+        </h1>
+        <p style={{ maxWidth: 450, lineHeight: 1.8 }}>
+          Sign in with your individual email account. Only an authorised owner
+          or team member can view enquiries, photos and website content.
+        </p>
+        {configured() ? (
+          <Login />
+        ) : (
+          <p style={{ marginTop: 25, fontSize: 13, lineHeight: 1.8 }}>
+            The workspace is ready for Supabase configuration. Sign-in and data
+            access remain disabled until the owner connects the project.
+          </p>
+        )}
+        <p style={{ marginTop: 35, fontSize: 12 }}>
+          <a href="/">Back to the website</a>
+        </p>
+      </main>
+    );
+  const role = await access();
+  if (!role)
+    return (
+      <main style={{ padding: "12vh 8vw", fontFamily: "Arial" }}>
+        <h1>Your account isn’t on the team list.</h1>
+        <p>
+          Ask the studio owner to add your sign-in email. No booking or photo
+          data has been disclosed.
+        </p>
+        <a href="/auth/signout" target="_top">
+          Sign out and use another account
+        </a>
+      </main>
+    );
+  return <Workspace />;
+}

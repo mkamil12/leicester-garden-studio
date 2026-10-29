@@ -2,7 +2,7 @@
 
 GitHub source: `mkamil12/leicester-garden-studio`.
 Supabase project: `zgztpbkjickoivadhivu`, London region, organisation selected by the user.
-Vercel intended project: `mma-garden-studio`, Kamil workspace.
+Vercel prepared project: `mma-garden-studio`, Kamil workspace.
 
 ## Environment
 
@@ -18,7 +18,7 @@ The Supabase Edge Function uses the platform’s built-in server credential. It 
 
 Apply the committed migration in `supabase/migrations/`, deploy `supabase/functions/garden-api/`, and verify security advisers. The `garden-photos` bucket is private. Public visitors cannot directly read bookings, membership, audit data or photos.
 
-Add the actual Vercel origin and `/auth/callback` redirect URL in Supabase Auth settings. Use an approved SMTP provider for client/team auth delivery when required by Supabase limits. An owner sign-in request can send an authentication email; booking requests do not send notifications in this version.
+The local `http://127.0.0.1:3000/auth/callback` redirect is configured. Production public Supabase URL/key variables are saved in Vercel. Add the actual Vercel origin and `/auth/callback` redirect URL in Supabase Auth settings. Use an approved SMTP provider for client/team auth delivery when required by Supabase limits. An owner sign-in request can send an authentication email; booking requests do not send notifications in this version.
 
 ## Preview and production
 

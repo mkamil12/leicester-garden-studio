@@ -1,4 +1,71 @@
-'use strict';
-(()=>{const data=document.getElementById('project-data');if(!data)return;const projects=JSON.parse(data.textContent);let index=0,busy=false;const range=document.getElementById('compare-range'),comparison=document.querySelector('.comparison'),before=document.getElementById('project-before'),after=document.getElementById('project-after');range.addEventListener('input',()=>comparison.style.setProperty('--split',range.value+'%'));
-async function show(next){if(busy||next===index)return;busy=true;const project=projects[(next+projects.length)%projects.length];const preload=src=>new Promise(resolve=>{const image=new Image();image.onload=resolve;image.onerror=resolve;image.src=src});await Promise.all([preload(project.before),preload(project.after)]);const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!reduced)comparison.classList.add('switching');const update=()=>{index=(next+projects.length)%projects.length;before.src=project.before;before.alt=project.beforeAlt;after.src=project.after;after.alt=project.afterAlt;range.value='50';comparison.style.setProperty('--split','50%');document.getElementById('project-title').textContent=project.title;document.getElementById('project-counter').textContent=String(index+1).padStart(2,'0')+' / '+String(projects.length).padStart(2,'0');document.querySelectorAll('[data-project]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.project)===index)));requestAnimationFrame(()=>{comparison.classList.remove('switching');busy=false})};if(reduced)update();else setTimeout(update,210);}
-document.querySelectorAll('[data-project]').forEach(button=>button.addEventListener('click',()=>show(Number(button.dataset.project))));document.getElementById('project-prev').addEventListener('click',()=>show(index-1));document.getElementById('project-next').addEventListener('click',()=>show(index+1));})();
+"use strict";
+(() => {
+  const data = document.getElementById("project-data");
+  if (!data) return;
+  const projects = JSON.parse(data.textContent);
+  let index = 0,
+    busy = false;
+  const range = document.getElementById("compare-range"),
+    comparison = document.querySelector(".comparison"),
+    before = document.getElementById("project-before"),
+    after = document.getElementById("project-after");
+  range.addEventListener("input", () =>
+    comparison.style.setProperty("--split", range.value + "%"),
+  );
+  async function show(next) {
+    if (busy || next === index) return;
+    busy = true;
+    const project = projects[(next + projects.length) % projects.length];
+    const preload = (src) =>
+      new Promise((resolve) => {
+        const image = new Image();
+        image.onload = resolve;
+        image.onerror = resolve;
+        image.src = src;
+      });
+    await Promise.all([preload(project.before), preload(project.after)]);
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduced) comparison.classList.add("switching");
+    const update = () => {
+      index = (next + projects.length) % projects.length;
+      before.src = project.before;
+      before.alt = project.beforeAlt;
+      after.src = project.after;
+      after.alt = project.afterAlt;
+      range.value = "50";
+      comparison.style.setProperty("--split", "50%");
+      document.getElementById("project-title").textContent = project.title;
+      document.getElementById("project-counter").textContent =
+        String(index + 1).padStart(2, "0") +
+        " / " +
+        String(projects.length).padStart(2, "0");
+      document
+        .querySelectorAll("[data-project]")
+        .forEach((button) =>
+          button.setAttribute(
+            "aria-pressed",
+            String(Number(button.dataset.project) === index),
+          ),
+        );
+      requestAnimationFrame(() => {
+        comparison.classList.remove("switching");
+        busy = false;
+      });
+    };
+    if (reduced) update();
+    else setTimeout(update, 210);
+  }
+  document
+    .querySelectorAll("[data-project]")
+    .forEach((button) =>
+      button.addEventListener("click", () =>
+        show(Number(button.dataset.project)),
+      ),
+    );
+  document
+    .getElementById("project-prev")
+    .addEventListener("click", () => show(index - 1));
+  document
+    .getElementById("project-next")
+    .addEventListener("click", () => show(index + 1));
+})();

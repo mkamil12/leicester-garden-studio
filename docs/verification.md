@@ -14,7 +14,7 @@
 
 ## Pending before handover
 
-- Configure the final production origin and Supabase Auth callback; verify owner magic-link delivery and a full signed-in CMS review.
+- Local Auth callback configured and the provider accepted an owner sign-in email request. Verify delivery and full signed-in CMS review; configure the final production origin/callback after deployment.
 - Verify editor restrictions, content publishing/restoration and booking assignment through authenticated browser sessions.
 - Browser file selection needs the Chrome extension’s “Allow access to file URLs” permission; API upload was verified independently.
 - Connect GitHub to Vercel and verify the deployed flow after the user completes the commercial hosting plan setup.

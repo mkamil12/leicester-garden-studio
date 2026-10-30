@@ -21,3 +21,7 @@
 - Agree real availability, price labels, privacy arrangements and notification delivery with the business before switching off test mode.
 
 No booking emails are sent, appointments are not automatically confirmed, and no payment is taken. Two clearly marked synthetic requests remain available for owner review.
+
+## Navigation/footer refinement — 30 October 2026
+
+Full-screen navigation verified at 390×844 and desktop width: overlay matches the viewport, background scrolling is locked, keyboard focus wraps, Escape closes it and returns focus to the trigger. Navbar logo is white through a CSS filter and the duplicate written brand name is removed. Footer has service, project, contact and studio information links with no horizontal overflow at checked widths. Decorative Unicode ornaments are replaced with inline SVG. Opening/link stagger and closing animations respect reduced-motion preference.

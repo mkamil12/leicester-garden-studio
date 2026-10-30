@@ -54,3 +54,7 @@ site['footer']=site['footer'].replace('Garden images are generated visual studie
 for page in site['pages'].values():
  page['body']=page['body'].replace('over 20 years of gardening experience','experience in local garden care').replace('Commercial grounds or a large landscape','A garden, hedge, lawn or outdoor space')
 p.write_text(json.dumps(site,indent=2))
+
+# Shared navigation/footer remain reproducible after rebuilding base pages.
+import runpy
+runpy.run_path(str(r/"scripts/update-chrome.py"),run_name="__main__")

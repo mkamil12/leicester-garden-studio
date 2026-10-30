@@ -121,7 +121,7 @@
         document.getElementById("demo-consent").hidden = true;
         f("demoConsent").required = false;
         document.getElementById("submit-booking").textContent =
-          "Send visit request ↗";
+          "Send visit request";
         document.querySelector(".booking-preview-note").hidden = true;
       }
     } catch (e) {
@@ -263,8 +263,8 @@
     } finally {
       button.disabled = false;
       button.textContent = demo
-        ? "Send test request ↗"
-        : "Send visit request ↗";
+        ? "Send test request"
+        : "Send visit request";
     }
   });
   loadDates();
